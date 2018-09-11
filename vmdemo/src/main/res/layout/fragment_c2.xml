@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btn1"
+    tools:context=".C2Fragment">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity中运用" />
-
-    <Button
-        android:id="@+id/btn2"
+        android:text="Fragment2"/>
+    <TextView
+        android:id="@+id/text_fc2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fragment数据同步" />
+        android:text="fragment2"/>
 
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/btn_fc2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义factory" />
+        android:text="change" />
 </LinearLayout>

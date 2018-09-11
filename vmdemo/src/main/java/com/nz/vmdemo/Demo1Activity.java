@@ -1,8 +1,8 @@
 package com.nz.vmdemo;
 
 import android.arch.lifecycle.Observer;
+
 import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +22,9 @@ public class Demo1Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo1);
-        viewModel = ViewModelProviders.of(this).get(Demo1ViewModel.class);
+        ViewModelProvider.AndroidViewModelFactory factory = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication());
+        ViewModelProvider viewModelProvider = new ViewModelProvider(this, factory);
+        viewModel = viewModelProvider.get(Demo1ViewModel.class);
         initView();
     }
 
