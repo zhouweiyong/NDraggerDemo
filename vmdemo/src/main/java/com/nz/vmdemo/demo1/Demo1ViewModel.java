@@ -1,4 +1,4 @@
-package com.nz.vmdemo;
+package com.nz.vmdemo.demo1;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
@@ -6,8 +6,7 @@ import android.arch.lifecycle.ViewModel;
 
 import com.nz.vmdemo.bean.User;
 
-public class Demo2ViewModel extends ViewModel {
-
+public class Demo1ViewModel extends ViewModel {
     private MutableLiveData<User> user;
 
     public LiveData<User> getUser() {
@@ -18,9 +17,7 @@ public class Demo2ViewModel extends ViewModel {
         return user;
     }
 
-    public void changAge() {
-        User u = user.getValue();
-        u.setAge(u.getAge() + 1);
-        user.postValue(u);
+    public void refreshUser() {
+        user.postValue(new User("jack", 17));
     }
 }

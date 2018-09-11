@@ -1,4 +1,4 @@
-package com.nz.vmdemo;
+package com.nz.vmdemo.demo1;
 
 import android.arch.lifecycle.Observer;
 
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.nz.vmdemo.R;
 import com.nz.vmdemo.bean.User;
 
 public class Demo1Activity extends AppCompatActivity implements View.OnClickListener {

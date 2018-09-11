@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.nz.vmdemo.demo1.Demo1Activity;
+import com.nz.vmdemo.demo2.Demo2Activity;
+import com.nz.vmdemo.demo3.Demo3Activity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn1;
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, Demo2Activity.class));
                 break;
             case R.id.btn3:
+                startActivity(new Intent(this, Demo3Activity.class));
                 break;
         }
     }
