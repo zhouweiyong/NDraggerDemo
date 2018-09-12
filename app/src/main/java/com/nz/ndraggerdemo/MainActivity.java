@@ -1,6 +1,7 @@
 package com.nz.ndraggerdemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MainUtils mainUtils;
     @Inject
     Context context;
+    private Button btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1.setOnClickListener(this);
         btn2 = (Button) findViewById(R.id.btn2);
         btn2.setOnClickListener(this);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn3.setOnClickListener(this);
     }
 
     @Override
@@ -50,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn2:
                 Log.i("zwy", mainUtils.getName());
                 Toast.makeText(context, mainUtils.getName(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn3:
+                startActivity(new Intent(this, ContainActivity.class));
                 break;
         }
     }
